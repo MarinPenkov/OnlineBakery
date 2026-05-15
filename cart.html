@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Количка | Sweet Heaven</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="topbar"><span>🔒 Сигурна примерна поръчка</span><span>🚚 Доставка до адрес</span><span>☎ 0888 123 456</span></div>
+  <header class="site-header">
+    <a class="logo" href="index.html"><span class="logo-mark">SH</span><span>Sweet Heaven</span></a>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Меню">☰</button>
+    <nav class="nav" id="mainNav">
+      <a href="index.html">Начало</a>
+      <div class="dropdown"><button class="dropbtn">Категории ▾</button><div class="dropdown-content" id="dropdownCategories"></div></div>
+      <a href="about.html">За нас</a>
+      <a href="cart.html" class="cart-link">Количка <span id="cartCount">0</span></a>
+    </nav>
+  </header>
+  <main class="section cart-layout">
+    <section>
+      <p class="eyebrow">финална стъпка</p>
+      <h1>Твоята количка</h1>
+      <div id="cartItems"></div>
+    </section>
+    <aside class="checkout-box">
+      <h2>Данни за поръчка</h2>
+      <div class="total-row"><span>Общо:</span><strong id="cartTotal">0.00 лв.</strong></div>
+      <form id="orderForm">
+        <input name="name" placeholder="Име и фамилия" required />
+        <input name="phone" placeholder="Телефон" required />
+        <input name="address" placeholder="Адрес за доставка" required />
+        <textarea name="note" placeholder="Бележка към поръчката: надпис, повод, час..."></textarea>
+        <button class="btn btn-full" type="submit">Завърши поръчката</button>
+      </form>
+      <p id="orderMessage" class="success"></p>
+    </aside>
+  </main>
+  <footer class="footer"><div><strong>Sweet Heaven</strong><p>Училищен проект</p></div><p>© 2026</p></footer>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
